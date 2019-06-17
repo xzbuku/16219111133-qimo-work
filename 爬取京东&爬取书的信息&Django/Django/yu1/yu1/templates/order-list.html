@@ -1,0 +1,35 @@
+<html>
+    <head>
+    <title>订单查询</title>
+    </head>
+    <body>
+    <B>订单展示</B>
+    <br>
+    <table border="1">
+        <tr>
+            <th>序号</th>
+            <th>订单编号</th>
+            <th>门店编号</th>
+            <th>收货人</th>
+            <th>详细地址</th>
+            <th>订单总价</th>
+            <th>实付金额</th>
+            <th>入机状态</th>
+        </tr>
+
+            {% for i in order %}
+                <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.0 }}</td>
+                <td>{{ i.1 }}</td>
+                <td>{{ i.2 }}</td>
+                <td>{{ i.3 }}</td>
+                <td>{{ i.4 }}</td>
+                <td>{{ i.5 }}</td>
+                <td>{{ i.6 }}</td>
+                </tr>
+            {% endfor %}
+
+    </table>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <title>订单查询</title>
+    </head>
+    <body>
+    <B>订单展示</B>
+    <br>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>pwd</th>
+           
+        </tr>
+
+            {% for i in order %}
+                <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.0 }}</td>
+                <td>{{ i.1 }}</td>
+               
+                </tr>
+            {% endfor %}
+
+    </table>
+    </body>
+</html>
